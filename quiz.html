@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Test NaturaVie</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      overflow-x: hidden;
+    }
+/* Scrollbar mai lată */
+::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+}
+
+/* Fundalul pistei de scroll */
+::-webkit-scrollbar-track {
+    background: #ffe0cc;  /* portocaliu deschis */
+    border-radius: 10px;
+}
+
+/* Thumb-ul (partea mobilă) */
+::-webkit-scrollbar-thumb {
+    background-color: #ff6b00;  /* portocaliu aprins */
+    border-radius: 10px;
+    border: 3px solid #ffe0cc;
+}
+
+/* La hover - mai vibrant */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #e65c00;
+}
+/* Scrollbar în Firefox */
+* {
+    scrollbar-width: thin;  /* Poți pune și "auto" pentru puțin mai lată */
+    scrollbar-color: #ff6b00 #ffe0cc;
+  }
+  @media (max-width: 480px) {
+    .sidebar {
+      display: none;
+    }
+    .main-content {
+      padding: 1rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+  
+    .quiz-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background:transparent;
+      padding: 2rem;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    h1 {
+      text-align: center;
+      color: #e67e22;
+      margin-bottom: 2rem;
+    }
+
+    .question {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      border: 4px solid #f5cba7;
+      border-radius: 10px;
+    }
+
+    .question p {
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      margin-top: 0.5rem;
+      cursor: pointer;
+    }
+
+    .submit-btn {
+      background-color: #e67e22;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      display: block;
+      margin: 2rem auto;
+      transition: all 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #d35400;
+    }
+
+    .result {
+  font-size: 1.4rem;
+  color: #2c3e50;
+}
+
+.feedback {
+  font-size: 1rem;
+  color: #2c3e50;
+  font-style: italic;
+  margin-top: 1rem;
+}
+.result pre {
+  white-space: pre-wrap; /* 🔥 permite liniilor să se rupă natural */
+  word-wrap: break-word;
+  font-size: 1.1rem;     /* mai mic, dar clar */
+  line-height: 1.4;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin-top: 1rem;
+}
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <form id="quizForm">
+<div class="question">
+<p>1. Ce sunt grăsimile?</p>
+<label><input type="radio" name="q1" value="Nutrienți esențiali care furnizează energie și au funcții vitale"> Nutrienți esențiali care furnizează energie și au funcții vitale</label>
+<label><input type="radio" name="q1" value="Proteine care reglează temperatura corpului"> Proteine care reglează temperatura corpului</label>
+<label><input type="radio" name="q1" value="Minerale care construiesc oasele"> Minerale care construiesc oasele</label>
+</div>
+<div class="question">
+<p>2. Care sunt grăsimile considerate „bune”?</p>
+<label><input type="radio" name="q2" value="Grăsimile trans și grăsimile saturate"> Grăsimile trans și grăsimile saturate</label>
+<label><input type="radio" name="q2" value="Grăsimile mononesaturate și polinesaturate"> Grăsimile mononesaturate și polinesaturate</label>
+<label><input type="radio" name="q2" value="Grăsimile sintetice"> Grăsimile sintetice</label>
+</div>
+<div class="question">
+<p>3. Ce tip de grăsimi este bogat în vitamina E și benefic pentru inimă?</p>
+<label><input type="radio" name="q3" value="Grăsimile saturate"> Grăsimile saturate</label>
+<label><input type="radio" name="q3" value="Grăsimile mononesaturate"> Grăsimile mononesaturate</label>
+<label><input type="radio" name="q3" value="Grăsimile trans"> Grăsimile trans</label>
+</div>
+<div class="question">
+<p>4. Care este o sursă bună de acizi grași Omega-3?</p>
+<label><input type="radio" name="q4" value="Carnea roșie"> Carnea roșie</label>
+<label><input type="radio" name="q4" value="Somonul"> Somonul</label>
+<label><input type="radio" name="q4" value="Produsele de patiserie"> Produsele de patiserie</label>
+</div>
+<div class="question">
+<p>5. Ce efecte au grăsimile trans asupra sănătății?</p>
+<label><input type="radio" name="q5" value="Scad colesterolul LDL"> Scad colesterolul LDL</label>
+<label><input type="radio" name="q5" value="Sunt benefice pentru inimă"> Sunt benefice pentru inimă</label>
+<label><input type="radio" name="q5" value="Cresc riscul de boli cardiovasculare"> Cresc riscul de boli cardiovasculare</label>
+</div>
+<div class="question">
+<p>6. Ce rol are grăsimea viscerală?</p>
+<label><input type="radio" name="q6" value="Îmbunătățește vederea"> Îmbunătățește vederea</label>
+<label><input type="radio" name="q6" value="Protejează organele interne"> Protejează organele interne</label>
+<label><input type="radio" name="q6" value="Crește colesterolul HDL"> Crește colesterolul HDL</label>
+</div>
+<div class="question">
+<p>7. Ce vitamine sunt solubile în grăsimi?</p>
+<label><input type="radio" name="q7" value="Vitaminele B și C"> Vitaminele B și C</label>
+<label><input type="radio" name="q7" value="Vitaminele A, D, E și K"> Vitaminele A, D, E și K</label>
+<label><input type="radio" name="q7" value="Vitamina K și calciu"> Vitamina K și calciu</label>
+</div>
+<div class="question">
+<p>8. Cum se transformă grăsimile în energie?</p>
+<label><input type="radio" name="q8" value="Prin descompunerea în aminoacizi"> Prin descompunerea în aminoacizi</label>
+<label><input type="radio" name="q8" value="Prin descompunerea în acizi grași și glicerol"> Prin descompunerea în acizi grași și glicerol</label>
+<label><input type="radio" name="q8" value="Prin evaporare"> Prin evaporare</label>
+</div>
+<div class="question">
+<p>9. Unde se depozitează de obicei grăsimile la femei?</p>
+<label><input type="radio" name="q9" value="În zona abdominală"> În zona abdominală</label>
+<label><input type="radio" name="q9" value="În zona umerilor"> În zona umerilor</label>
+<label><input type="radio" name="q9" value="În zona șoldurilor și taliei"> În zona șoldurilor și taliei</label>
+</div>
+<div class="question">
+<p>10. Cum pot fi arse grăsimile în exces?</p>
+<label><input type="radio" name="q10" value="Prin administrarea de vitamine"> Prin administrarea de vitamine</label>
+<label><input type="radio" name="q10" value="Prin reducerea caloriilor și exerciții fizice"> Prin reducerea caloriilor și exerciții fizice</label>
+<label><input type="radio" name="q10" value="Prin creșterea consumului de zahăr"> Prin creșterea consumului de zahăr</label>
+</div>
+<div class="question">
+<p>11. Cât la sută din caloriile zilnice ar trebui să provină din grăsimi?</p>
+<label><input type="radio" name="q11" value="5-10%"> 5-10%</label>
+<label><input type="radio" name="q11" value="20-30%"> 20-30%</label>
+<label><input type="radio" name="q11" value="40-50%"> 40-50%</label>
+</div>
+<div class="question">
+<p>12. Care este procentul ideal de grăsime corporală la sportivii bărbați?</p>
+<label><input type="radio" name="q12" value="6-13%"> 6-13%</label>
+<label><input type="radio" name="q12" value="18-25%"> 18-25%</label>
+<label><input type="radio" name="q12" value="Peste 26%"> Peste 26%</label>
+</div>
+<div class="question">
+<p>13. Ce sursă de grăsimi este considerată nesănătoasă?</p>
+<label><input type="radio" name="q13" value="Avocado"> Avocado</label>
+<label><input type="radio" name="q13" value="Ulei de măsline"> Ulei de măsline</label>
+<label><input type="radio" name="q13" value="Patiserie industrială"> Patiserie industrială</label>
+</div>
+<div class="question">
+<p>14. Care este efectul grăsimilor polinesaturate?</p>
+<label><input type="radio" name="q14" value="Ridică LDL"> Ridică LDL</label>
+<label><input type="radio" name="q14" value="Construiesc membrana celulară și reduc inflamațiile"> Construiesc membrana celulară și reduc inflamațiile</label>
+<label><input type="radio" name="q14" value="Scad HDL"> Scad HDL</label>
+</div>
+<div class="question">
+<p>15. Ce aliment din mic dejunul sugerat oferă grăsimi mononesaturate?</p>
+<label><input type="radio" name="q15" value="Spanac"> Spanac</label>
+<label><input type="radio" name="q15" value="Avocado"> Avocado</label>
+<label><input type="radio" name="q15" value="Pâine integrală"> Pâine integrală</label>
+</div>
+
+      <button type="submit" class="submit-btn">Trimite Răspunsurile</button>
+    </form>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    const quizForm = document.getElementById("quizForm");
+    const resultDiv = document.getElementById("result");
+
+    const answers = {
+      q1: "Nutrienți esențiali care furnizează energie și au funcții vitale",
+      q2: "Grăsimile mononesaturate și polinesaturate",
+      q3: "Grăsimile mononesaturate",
+      q4: "Somonul",
+      q5: "Cresc riscul de boli cardiovasculare",
+      q6: "Protejează organele interne",
+      q7: "Vitaminele A, D, E și K",
+      q8: "Prin descompunerea în acizi grași și glicerol",
+      q9: "În zona șoldurilor și taliei",
+      q10: "Prin reducerea caloriilor și exerciții fizice",
+      q11: "20-30%",
+      q12: "6-13%",
+      q13: "Patiserie industrială",
+      q14: "Construiesc membrana celulară și reduc inflamațiile",
+      q15: "Avocado",
+    };
+
+    quizForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      let score = 0;
+      let total = Object.keys(answers).length;
+      let feedback = "";
+
+      for (let key in answers) {
+        const selected = quizForm.elements[key].value;
+        if (selected === answers[key]) {
+          score++;
+        } else {
+          feedback +=` \nÎntrebarea ${key.replace("q", "")}: răspuns corect - ${answers[key]}`;
+        }
+      }
+
+      resultDiv.innerHTML = `Ai obținut <strong>${score}/${total}</strong> puncte!<br><pre class='feedback'>${feedback}</pre>`;
+    });
+  </script>
+</body>
+</html>

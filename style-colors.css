@@ -1,0 +1,43 @@
+/* Titluri mari */
+h1, h2 {
+    color: #00c97f;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Subtitluri și secțiuni secundare */
+h3, h4 {
+    color: #ff6b00;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Text obișnuit */
+body, p {
+    color: #3a3a3a;
+    font-size: 14pt;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Linkuri și interacțiuni */
+a {
+    color: #2ecc71;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff5400;
+}
+
+/* Elemente speciale (ex: etichete, butoane decorative) */
+.tag-important {
+    color: #f39c12;
+    font-weight: bold;
+}
+.info-section h2 {
+    color: #007a4d !important; /* verde vibrant, sau alt cod dorit */
+}

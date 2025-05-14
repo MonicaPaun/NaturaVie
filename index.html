@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NaturaVie: Grăsimi esențiale și esențe naturale</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="style.css"> 
+        <link rel="stylesheet" href="style-colors.css">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Favicon general -->
+<link rel="icon" href="Assets/favicon/favicon.ico" type="image/x-icon">
+
+<!-- Dimensiuni specifice pentru desktop și browser -->
+<link rel="icon" href="Assets/favicon/favicon-16x16.png" sizes="16x16" type="image/x-icon">
+<link rel="icon" href="Assets/favicon/favicon-32x32.ico" sizes="32x32" type="image/x-icon">
+
+<!-- Android -->
+<link rel="icon" href="Assets/favicon/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" href="Assets/favicon/android-chrome-512x512.png" sizes="512x512">
+
+<!-- Apple -->
+<link rel="apple-touch-icon" href="Assets/favicon/apple-touch-icon.png">
+
+<!-- Manifest pentru progresiv web app (PWA) -->
+<link rel="manifest" href="Assets/favicon/site.webmanifest">
+
+<!-- Opțional: Dimensiuni icoanei pentru diverse dispozitive -->
+<link rel="icon" href="Assets/favicon/favicon.ico" sizes="96x96">
+<link rel="icon" href="Assets/favicon/favicon.ico" sizes="48x48">
+
+
+    </head>
+<body>
+  <button id="menu-toggle" class="menu-btn">
+  ☰
+</button>
+
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#" class="nav-link menu-item" data-section="acasa">
+                    <span class="item-icon"><i class='bx bx-home'></i></span>
+                    <span class="item-txt">Acasă</span>
+                </a></li>
+                <li><a href="#" class="nav-link menu-item" data-section="grasimi">
+                    <span class="item-icon"><i class='bx bxs-bowl-hot'></i></span>
+                    <span class="item-txt">Grăsimi esențiale</span>
+                </a></li>
+                <li><a href="#" class="nav-link menu-item" data-section="tipuri">
+                    <span class="item-icon"><i class='bx bx-category-alt'></i></span>
+                    <span class="item-txt">Tipuri de grasimi</span>
+                </a></li>
+                <li><a href="#" class="nav-link menu-item" data-section="dieta">
+                    <span class="item-icon"><i class='bx bxs-food-menu'></i></span>
+                    <span class="item-txt">Dieta echilibrata</span>
+                </a></li>
+                <li><a href="#" class="nav-link menu-item" data-section="sfaturi">
+                    <span class="item-icon"><i class='bx bx-bulb'></i></span>
+                    <span class="item-txt">Sfaturi</span>
+                </a></li>
+
+                 <li><a href="#" class="nav-link menu-item" data-section="plan">
+                    <span class="item-icon"><i class='bx bx-calendar-heart'></i></span>
+                    <span class="item-txt">Plan alimentar</span>
+                </a></li>
+                <li><a href="#" class="nav-link menu-item" data-section="galerie">
+                    <span class="item-icon"><i class='bx bx-image'></i></span>
+                    <span class="item-txt">Galerie</span>
+                </a></li>
+                <li><a href="#" class="nav-link menu-item" data-section="test">
+                    <span class="item-icon"><i class='bx bx-edit-alt'></i></span>
+                    <span class="item-txt">Test</span>
+                </a></li>
+                <li><a href="#" class="nav-link menu-item" data-section="chatbot">
+                    <span class="item-icon"><i class='bx bx-bot'></i></span>
+                    <span class="item-txt">NutriBot</span>
+                </a></li>
+                <li><a href="#" class="nav-link menu-item" data-section="contact">
+                    <span class="item-icon"><i class='bx bx-envelope'></i></span>
+                    <span class="item-txt">Contact</span>
+                </a></li>
+                <li><a href="#" class="nav-link menu-item" data-section="bibliografie">
+                    <span class="item-icon"><i class='bx bx-dots-horizontal-rounded'></i></span>
+                    <span class="item-txt">Bibliografie</span>
+                </a></li>
+            </ul>
+        </div>
+
+        <div class="main-content" id="main-content">
+            <section class="info-section">
+              <h2>Bine ați venit pe platforma NaturaVie</h2>
+          
+              <div class="intro-box">
+                <p>
+                    Descoperă secretele grăsimilor esențiale – sănătate, echilibru și natură în fiecare picătură.
+                </p>
+              </div>
+          
+              <div class="credit-box-separata">
+                <p>
+                  <strong>Proiect realizat de:</strong><br>
+                  Treanță Daria Mihaela și Păun Monica Georgiana,<br>
+                  Colegiul Național „Tudor Vladimirescu”, București<br>
+                  Clasa a X-a A
+                </p>
+                <img src="Assets/poze/logo-naturavie.png" alt="Logo NaturaVie" class="logo-local" />
+              </div>
+            </section>
+          </div>
+        </div>
+    </div>
+
+    <script>
+        const content = {
+            acasa: `
+  <section class="info-section">
+    <h2>Bine ați venit pe platforma NaturaVie</h2>
+
+    <div class="intro-box">
+      <p>Descoperă secretele grăsimilor esențiale – sănătate, echilibru și natură în fiecare picătură.</p>
+    </div>
+
+    <div class="credit-box-separata">
+      <p><strong>Proiect realizat de:</strong><br>
+      Treanță Daria Mihaela și Păun Monica Georgiana,<br>
+      Colegiul Național „Tudor Vladimirescu”, București<br>
+      Clasa a X-a A</p>
+      <img src="Assets/poze/logo-naturavie.png" alt="Logo NaturaVie" class="logo-local" />
+    </div>
+  </section>
+`,
+
+grasimi: `
+<section class="info-section">
+  <h2>Tot ce trebuie să știi despre grăsimi</h2>
+
+  <h3>1. Ce sunt grăsimile?</h3>
+  <p>Grăsimile sunt nutrienți esențiali pentru organism, necesari pentru o sănătate optimă. Acestea sunt un tip de macronutrienți care furnizează energie și au multiple funcții vitale.</p>
+  <ul>
+    <li>✅ <strong>Grăsimi sănătoase</strong> (mononesaturate și polinesaturate) – avocado, nuci, semințe, uleiuri vegetale</li>
+    <li>⚠️ <strong>Grăsimi nesănătoase</strong> (trans și saturate) – alimente procesate, prăjeli</li>
+  </ul>
+
+  <h3>2. De ce sunt importante grăsimile?</h3>
+  <ul>
+    <li>⚡ <strong>Sursa de energie:</strong> 9 calorii/gram – ex: ulei de măsline, somon, avocado</li>
+    <li>🛡️ <strong>Protecția organelor:</strong> Grăsimea viscerală protejează organele de șocuri</li>
+    <li>🌡️ <strong>Reglarea temperaturii:</strong> Ajută la menținerea unei temperaturi stabile</li>
+    <li>💊 <strong>Absorbția vitaminelor:</strong> A, D, E și K – ex: salată cu avocado</li>
+    <li>🦠 <strong>Imunitate:</strong> Omega-3/Omega-6 – ex: pește gras, semințe de chia</li>
+    <li>🧬 <strong>Funcția cerebrală:</strong> Grăsimile susțin transmiterea semnalelor nervoase</li>
+  </ul>
+
+  <h3>3. Cum sunt utilizate grăsimile în organism?</h3>
+  <p>Grăsimile sunt transformate în acizi grași și glicerol, care sunt absorbiți și utilizați pentru energie sau stocați pentru mai târziu. De exemplu, în repaus, corpul consumă rezervele de grăsime.</p>
+
+  <h3>4. Cum sunt depozitate grăsimile?</h3>
+  <p>Excesul de grăsimi este stocat în celulele adipoase:</p>
+  <ul>
+    <li>👩‍🦰 <strong>Femei:</strong> Șolduri, talie, posterior</li>
+    <li>👨 <strong>Bărbați:</strong> Abdomen, piept</li>
+  </ul>
+
+  <h3>5. Cum sunt transformate grăsimile în energie?</h3>
+  <p>Acizii grași și glicerolul sunt transportați prin sânge și utilizați pentru energie – mai ales în timpul exercițiilor fizice, cum ar fi alergarea sau înotul.</p>
+
+  <h3>6. Cum se pot arde grăsimile în exces?</h3>
+  <ul>
+    <li>🍽️ <strong>Reducerea caloriilor:</strong> Dietă echilibrată = mai puțină grăsime stocată</li>
+    <li>🏃‍♀️ <strong>Exerciții fizice:</strong> Activitate aerobică stimulează arderea grăsimii</li>
+  </ul>
+
+  <h3>7. Câtă grăsime ar trebui să consumi zilnic?</h3>
+  <p>Ideal: 20–30% din totalul caloriilor zilnice. Ex: pentru 2500 kcal/zi → 55–83 g de grăsimi, preferabil mononesaturate sau polinesaturate.</p>
+
+  <h3>8. IMC și procentul de grăsime corporală</h3>
+  <p><strong>IMC</strong> este un indicator de greutate/înălțime, dar nu arată direct grăsimea. Pentru evaluare mai precisă se folosește <strong>procentul de grăsime corporală</strong>, important pentru riscul cardiovascular.</p>
+<p><strong>IMC</strong> = G (exprimată în kilograme) / I2 (exprimată în metri)</p>
+<p>Dacă o persoană cântărește 56 kg și are o înălțime de 1,65 m, atunci IMC măsoară 20,57.</p>
+
+  <h3>9. Procentul ideal de grăsime corporală</h3>
+  <ul>
+    <li>👩 <strong>Femei:</strong>
+      <ul>
+        <li>Sportive performanță: 14–20%</li>
+        <li>Sportive recreaționale: 21–24%</li>
+        <li>Normal: 25–31%</li>
+        <li>Obezitate: Peste 32%</li>
+      </ul>
+    </li>
+    <li>👨 <strong>Bărbați:</strong>
+      <ul>
+        <li>Sportivi performanță: 6–13%</li>
+        <li>Sportivi recreaționali: 14–17%</li>
+        <li>Normal: 18–25%</li>
+        <li>Obezitate: Peste 26%</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>✅ Concluzie</h3>
+  <p>Grăsimile sunt esențiale pentru sănătate, dar trebuie consumate cu moderație și din surse sănătoase. Alege grăsimi bune, evită excesele și combină o alimentație echilibrată cu mișcare pentru o viață activă și sănătoasă.</p>
+</section>
+`,
+
+  tipuri: `
+  <section class="info-section">
+  <h2><i class="bx bx-flask"></i> Tipuri de grăsimi și impactul lor asupra sănătății</h2>
+
+  <p>Grăsimile joacă un rol esențial în organism, dar este important să știm că nu toate sunt benefice. Există grăsimi „bune” și grăsimi „rele”, fiecare având un impact diferit asupra sănătății. În această secțiune, vom explora aceste tipuri de grăsimi, beneficiile lor, dar și riscurile asociate cu un consum excesiv de grăsimi nesănătoase.</p>
+
+  <h3><i class="bx bx-check-circle"></i> 1. Grăsimile „Bune”</h3>
+
+  <h4>Grăsimile mononesaturate</h4>
+  <p>Aceste grăsimi sunt considerate extrem de sănătoase, fiind benefice pentru inimă și contribuind la reducerea riscului de afecțiuni cardiovasculare. Se găsesc în stare lichidă la temperatura camerei și sunt bogate în vitamina E.</p>
+  <ul>
+    <li><strong>Surse:</strong> ulei de măsline, avocado, nuci, migdale, caju, semințe de susan și dovleac, ulei de rapiță</li>
+    <li><strong>Beneficii:</strong> reduc colesterolul „rău” LDL, scad trigliceridele, susțin sănătatea cardiovasculară, ajută la controlul greutății și reduc rigiditatea articulară</li>
+  </ul>
+
+  <h4>Grăsimile polinesaturate</h4>
+  <p>Aceste grăsimi esențiale trebuie obținute din alimentație, deoarece organismul nu le poate produce. Includ acizii grași Omega-3 și Omega-6, importanți pentru sănătatea inimii și a sistemului nervos.</p>
+  <ul>
+    <li><strong>Surse:</strong> pește gras (somon, macrou, ton), semințe de in, nuci</li>
+    <li><strong>Beneficii:</strong> reduc inflamația, sprijină funcția cerebrală, construiesc membranele celulare, reduc colesterolul LDL</li>
+  </ul>
+
+  <h3><i class="bx bx-error-circle"></i> 2. Grăsimile „Rele”</h3>
+
+  <h4>Grăsimile trans</h4>
+  <p>Sunt considerate cele mai nocive grăsimi pentru sănătate. Se găsesc în alimente procesate pentru a prelungi durata de valabilitate și stabilitatea la gătit.</p>
+  <ul>
+    <li><strong>Surse:</strong> produse de patiserie (croissante, prăjituri), snacksuri ambalate, alimente prăjite, margarine parțial hidrogenate</li>
+    <li><strong>Efecte negative:</strong> cresc colesterolul LDL, scad HDL, declanșează inflamații și pot duce la diabet de tip 2</li>
+  </ul>
+
+  <h4>Grăsimile saturate</h4>
+  <p>Deși nu toate sunt la fel de periculoase, se recomandă consumul moderat. Cele din surse ultraprocesate pot favoriza boli cardiovasculare.</p>
+  <ul>
+    <li><strong>Surse:</strong> carne roșie, piele de pui, lactate grase, untură, ulei de cocos și palmier</li>
+    <li><strong>Efecte negative:</strong> pot crește colesterolul LDL, cresc riscul de boli de inimă și diabet de tip 2</li>
+  </ul>
+
+  <h3><i class="bx bx-bulb"></i> 3. Cum să alegi grăsimile potrivite</h3>
+  <ul>
+    <li>Înlocuiește grăsimile trans cu ulei de măsline, avocado sau nuci</li>
+    <li>Consumă pește gras de 2-3 ori pe săptămână pentru aport de Omega-3</li>
+    <li>Redu consumul de carne roșie și lactate grase, optând pentru variante mai slabe</li>
+  </ul>
+
+  <h3><i class="bx bx-bookmark"></i> 4. Concluzie</h3>
+  <p>Grăsimile sunt esențiale pentru sănătate, dar cheia este alegerea corectă. Grăsimile mononesaturate și polinesaturate aduc beneficii semnificative, în timp ce grăsimile trans și cele saturate pot dăuna sănătății dacă sunt consumate în exces. Prin alegeri alimentare corecte, poți susține sănătatea inimii, a creierului și a întregului organism.</p>
+</section>
+`,
+
+
+  dieta: `
+  <section class="info-section">
+  <h2><i class="bx bx-flask"></i> Cum stabilești o dietă echilibrată în grăsimi pentru organism?</h2>
+  <p>O dietă echilibrată în grăsimi este esențială pentru menținerea sănătății generale. Atât excesul, cât și carența de grăsimi pot afecta negativ funcțiile vitale ale corpului. Este important să înțelegi cum să integrezi corect grăsimile în alimentația zilnică.</p>
+
+  <h3><i class="bx bx-flask"></i>1. Procentajul de grăsimi necesar în dietă</h3>
+  <p>Grăsimile ar trebui să constituie <strong>20-30%</strong> din totalul caloriilor zilnice, în funcție de stilul de viață și nevoile individuale. Este esențial ca aceste grăsimi să provină în principal din surse sănătoase.</p>
+  <ul>
+    <li>2000 kcal ➜ 44-66g grăsimi (400-600 kcal din grăsimi)</li>
+    <li>2500 kcal ➜ 55-83g grăsimi (500-750 kcal din grăsimi)</li>
+  </ul>
+  <p>🔍 Alege grăsimi mononesaturate și polinesaturate pentru un aport benefic!</p>
+
+  <h3><i class="bx bx-flask"></i>2. Grăsimile „sănătoase” vs. grăsimile „rele”</h3>
+  <p>Este important să diferențiem tipurile de grăsimi și efectele lor asupra sănătății:</p>
+
+  <div class="card">
+    <h3>Grăsimi nesaturate ✅</h3>
+    <p>Acestea susțin sănătatea inimii și mențin colesterolul în limite optime. Surse recomandate:</p>
+    <ul>
+      <li>Ulei de măsline</li>
+      <li>Avocado 🥑</li>
+      <li>Nuci și semințe</li>
+      <li>Pește gras (somon, macrou, sardine 🐟)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Grăsimi saturate ⚠️</h3>
+    <p>Consumul moderat este permis, însă excesul poate crește colesterolul „rău” (LDL):</p>
+    <ul>
+      <li>Carne roșie</li>
+      <li>Produse lactate grase 🧀</li>
+      <li>Uleiuri tropicale (cocos 🌴, palmier)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Grăsimi trans 🚫</h3>
+    <p>Trebuie evitate complet, deoarece afectează grav sănătatea cardiovasculară:</p>
+    <ul>
+      <li>Produse de patiserie industrială 🥐</li>
+      <li>Snacksuri procesate</li>
+      <li>Prăjeli</li>
+    </ul>
+  </div>
+
+  <h3><i class="bx bx-flask"></i>3. Cum să înlocuiești grăsimile săturate cu grăsimi nesaturate</h3>
+  <div class="card">
+    <ul>
+      <li>🍶 Înlocuiește untul cu ulei de măsline (pentru gătit și salate)</li>
+      <li>🐟 Consumă pește gras (somon, macrou, sardine)</li>
+      <li>🥑 Include avocado în salate, toasturi sau smoothie-uri</li>
+      <li>🥜 Alege nuci și semințe ca gustări sau în preparate</li>
+    </ul>
+  </div>
+
+  <h3><i class="bx bx-flask"></i>4. Recomandările experților pentru o dietă echilibrată în grăsimi</h3>
+  <div class="card">
+    <ul>
+      <li>✅ Consumă grăsimi în mod moderat – ideal 30% din aportul caloric</li>
+      <li>🔄 Favorizează grăsimile nesaturate, limitând pe cele saturate</li>
+      <li>🚫 Evită complet grăsimile trans – nu au niciun beneficiu nutrițional</li>
+    </ul>
+    <p>🔑 Echilibrul și calitatea grăsimilor sunt cheia unei alimentații sănătoase!</p>
+  </div>
+
+  <hr>
+  <h3><i class="bx bx-flask"></i> Concluzie</h3>
+  <p>O dietă echilibrată în grăsimi contribuie la buna funcționare a organismului și la prevenirea bolilor cronice. Alege grăsimi nesaturate din surse naturale, limitează cele saturate și evită complet grăsimile trans. Prin alegeri conștiente, susții sănătatea inimii și a întregului organism pe termen lung.</p>
+</section>
+`,
+
+  sfaturi: `
+  <section class="info-section">
+  <h2>Sfaturi practice pentru a evita grăsimile „rele” în alimentația zilnică</h2>
+  <p>Adoptarea unor obiceiuri alimentare sănătoase te poate ajuta să reduci riscul de boli cardiovasculare, să scapi de kilogramele în plus și să ai mai multă energie. Iată cum poți limita consumul de grăsimi nesănătoase, în special grăsimi saturate și trans:</p>
+
+  <h3>✅ 1. Alege preparatele gătite în casă</h3>
+  <p>Gătitul acasă îți oferă control total asupra ingredientelor. Optează pentru grăsimi sănătoase precum:</p>
+  <ul>
+    <li>🧴 Ulei de măsline extravirgin</li>
+    <li>🌻 Ulei de floarea-soarelui presat la rece</li>
+    <li>🌱 Ulei de rapiță</li>
+  </ul>
+  <p>Evită prăjirea și preferă coacerea, fierberea sau gătitul la aburi.</p>
+
+  <h3>✅ 2. Citește cu atenție etichetele alimentelor</h3>
+  <p>Pe ambalajele produselor pot apărea grăsimile trans sub denumiri precum:</p>
+  <ul>
+    <li>„grăsimi parțial hidrogenate”</li>
+    <li>„uleiuri vegetale hidrogenate”</li>
+  </ul>
+  <p>Evită produsele care conțin aceste ingrediente, deoarece pot crește colesterolul „rău” și riscul de diabet.</p>
+
+  <h3>✅ 3. Redu consumul de alimente ultraprocesate</h3>
+  <p>Limitează cât mai mult consumul de:</p>
+  <ul>
+    <li>🥩 Mezeluri și carne grasă (cârnați, salam, costiță)</li>
+    <li>🧈 Produse lactate grase (smântână grasă, unt, brânzeturi maturate)</li>
+    <li>🍔 Alimente fast-food (cartofi prăjiți, burgeri, shaorma)</li>
+    <li>🥐 Produse de patiserie și cofetărie industriale (foietaje, prăjituri, croissante)</li>
+  </ul>
+  <p>Acestea sunt adesea surse concentrate de grăsimi trans și saturate. Poți consuma ocazional, în cantități mici, doar din poftă, nu ca parte a alimentației regulate.</p>
+
+  <h3>✅ 4. Înlocuiește grăsimile nesănătoase cu variante mai bune</h3>
+  <p>Fă mici schimbări în alimentația ta de zi cu zi:</p>
+  <ul>
+    <li>🥪 În loc de margarină sau unt în sandvișuri, încearcă:
+      <ul>
+        <li>Humus (pastă de năut)</li>
+        <li>Fasole bătută</li>
+        <li>Avocado pisat cu sare și zeamă de lămâie</li>
+      </ul>
+    </li>
+    <li>🥛 În loc de lapte integral, optează pentru:
+      <ul>
+        <li>Lapte semi-degresat</li>
+        <li>Lapte vegetal (soia, ovăz, migdale)</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>✅ 5. Adoptă o dietă hipolipidică, dacă este cazul</h3>
+  <p>Pentru persoanele cu risc cardiovascular crescut (hipertensiune, colesterol mărit, istoric de boli de inimă), se recomandă o alimentație săracă în grăsimi:</p>
+  <ul>
+    <li>🥗 Mese simple, cu multe legume și proteine slabe (pește, carne albă)</li>
+    <li>❌ Eliminarea grăsimilor trans și reducerea celor saturate</li>
+    <li>🌾 Accent pe alimente bogate în fibre (leguminoase, cereale integrale)</li>
+  </ul>
+
+  <h3>🧠 Concluzie</h3>
+  <p>Evitarea grăsimilor „rele” nu înseamnă să elimini complet grăsimile din dietă, ci să alegi sursele potrivite și să controlezi cantitățile. Schimbările mici, aplicate constant, au cel mai mare impact asupra sănătății pe termen lung.</p>
+</section>
+
+`,
+  plan:`
+<section class="info-section">
+    <h2>Plan alimentar zilnic</h2>
+    <h2>Dietă echilibrată în grăsimi sănătoase</h2>
+
+    <div class="meal">
+      <h3>🍳 Mic dejun</h3>
+      <ul>
+        <li>Omletă cu spanac și ciuperci, preparată în ulei de măsline</li>
+        <li>2 felii de pâine integrală</li>
+        <li>1/2 avocado cu lămâie și sare</li>
+        <li>Ceai verde sau cafea fără zahăr</li>
+      </ul>
+      <div class="note">Conține grăsimi mononesaturate și proteine sănătoase.</div>
+    </div>
+
+    <div class="meal">
+      <h3>🍎 Gustare dimineața</h3>
+      <ul>
+        <li>Mână de migdale crude</li>
+        <li>Măr sau pară</li>
+      </ul>
+      <div class="note">Migdalele aduc grăsimi sănătoase și vitamina E.</div>
+    </div>
+
+    <div class="meal">
+      <h3>🥗 Prânz</h3>
+      <ul>
+        <li>Somon la cuptor cu ierburi</li>
+        <li>Quinoa fiartă</li>
+        <li>Salată de crudități cu ulei de rapiță</li>
+        <li>Feta (opțional)</li>
+      </ul>
+      <div class="note">Omega-3, fibre și grăsimi bune pentru inimă.</div>
+    </div>
+
+    <div class="meal">
+      <h3>🥛 Gustare după-amiază</h3>
+      <ul>
+        <li>Iaurt grecesc 2%</li>
+        <li>Semințe de in măcinate</li>
+        <li>Fructe de pădure</li>
+      </ul>
+      <div class="note">Ajută digestia și oferă acizi grași esențiali.</div>
+    </div>
+
+    <div class="meal">
+      <h3>🍲 Cină</h3>
+      <ul>
+        <li>Supă cremă de linte roșie</li>
+        <li>Salată cu ton, fasole, ceapă și ardei</li>
+        <li>Pâine integrală prăjită</li>
+      </ul>
+      <div class="note">Ușoară, dar sățioasă, bogată în fibre și grăsimi sănătoase.</div>
+    </div>
+
+    <div class="meal">
+      <h3>🍫 Gustare opțională</h3>
+      <ul>
+        <li>Pătrățel de ciocolată neagră (70%)</li>
+        <li>Ceai de plante</li>
+      </ul>
+      <div class="note">Mic răsfăț antioxidant.</div>
+    </div>
+  </section>
+`,
+
+  galerie: `
+    <div class="carousel galerie-foto">
+  <h2>Galerie</h2>
+  <h3>Grăsimi Esențiale</h3>
+
+  <div class="carousel-scroll">
+    <div class="carousel-track scrollable">
+      <!-- GRUPUL 1 -->
+      <figure><img src="Assets/poze/avocado.jpg" alt="Avocado"><figcaption>Avocado</figcaption></figure>
+      <figure><img src="Assets/poze/seminte-in.jpg" alt="Semințe de in"><figcaption>Semințe de in</figcaption></figure>
+      <figure><img src="Assets/poze/capsule.jpg" alt="Capsule Omega-3"><figcaption>Capsule Omega-3</figcaption></figure>
+      <figure><img src="Assets/poze/somon.jpg" alt="Somon"><figcaption>Somon</figcaption></figure>
+      <figure><img src="Assets/poze/uleiuri.jpg" alt="Uleiuri vegetale"><figcaption>Uleiuri vegetale</figcaption></figure>
+      <figure><img src="Assets/poze/salata.jpg" alt="Salată cu ulei"><figcaption>Preparate culinare</figcaption></figure>
+
+      <!-- GRUPUL 2 (duplicat pt buclă continuă) -->
+      <figure><img src="Assets/poze/avocado1.jpg" alt="Avocado"><figcaption>Avocado</figcaption></figure>
+      <figure><img src="Assets/poze/seminte-in1.jpg" alt="Semințe de in"><figcaption>Semințe de in</figcaption></figure>
+      <figure><img src="Assets/poze/capsule1.jpg" alt="Capsule"><figcaption>Capsule Omega-3</figcaption></figure>
+      <figure><img src="Assets/poze/somon1.jpg" alt="Somon"><figcaption>Somon</figcaption></figure>
+      <figure><img src="Assets/poze/uleiuri1.jpg" alt="Uleiuri"><figcaption>Uleiuri vegetale</figcaption></figure>
+      <figure><img src="Assets/poze/salata1.jpg" alt="Salata"><figcaption>Preparate culinare</figcaption></figure>
+    </div>
+  </div>
+</div>
+  `,
+  test: `
+  <section class="info-section">
+    <h2>Test de cunoștințe</h2>
+    <iframe src="quiz.html" width="100%" height="500px" style="border: none;"></iframe>
+  </section>
+`,
+chatbot: `
+  <iframe src="chat-bot.html" allow="microphone" style="border: none; width: 100%; height: 600px;"></iframe>
+`,
+contact: `
+  <section class="contact-section">
+    <h2>Contact</h2>
+    <form class="contact-form" action="https://formsubmit.co/treantadary@gmail.com" method="POST">
+      <label for="name">Nume</label>
+      <input type="text" id="name" name="name" placeholder="Numele tău complet" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="exemplu@email.com" required>
+
+      <label for="message">Mesaj</label>
+      <textarea id="message" name="message" rows="5" placeholder="Ai o curiozitate? Îți răspundem cu drag! 🌿" required></textarea>
+
+      <!-- Opțiuni ascunse -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://example.com/multumim.html">
+
+      <button type="submit">Trimite mesajul</button>
+    </form>
+  </section>
+`,
+bibliografie: `
+    <section class="info-section">
+  <h2><i class="bx bx-flask"></i> Bibliografie</h2>
+  <ul>
+    <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5871211/" target="_blank">NCBI – Omega-3 Fatty Acids: Health Benefits</a></li>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/33271778/" target="_blank">PubMed – Essential Oils and Health Effects</a></li>
+    <li><a href="https://www.doc.ro/colesterol/grasimi-tipuri-saturate-nesaturate-efecte#Cum%20poți%20arde%20grăsimile%20în%20exces%20din%20organism?" target="_blank">Healthline – Essential Oils Guide</a></li>
+    <li><a href="https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/" target="_blank">NIH – Omega-3 Fact Sheet</a></li>
+    <li><a href="https://www.drmax.ro/articole/grasimi-sanatoase-si-grasimi-nesanatoase-ce-trebuie-sa-stii" target="_blank">Dr. Max - Grăsimi sănătoase și nesănătoase</a></li>
+    <li><a href="https://www.doc.ro/colesterol/grasimi-tipuri-saturate-nesaturate-efecte" target="_blank">DOC.ro - Ghid complet despre grăsimi</a></li>
+    <li><a href="https://www.drmax.ro/articole/grasimi-sanatoase-si-grasimi-nesanatoase-ce-trebuie-sa-stii" target="_blank">Farmacia Tei - Diferența între uleiurile esențiale și vegetale</a></li>
+    <li><a href="https://www.helpnet.ro/grasimile-pe-care-le-consumam-tipuri-roluri-si-efecte-pentru-organism" target="_blank">Oleya.ro – Uleiuri esențiale 100% pure pentru aromaterapie</a></li>
+    <li><a href="https://mcmedexpert.ro/grasimile-esentiale-nelipsite-din-alimentatia-zilnica/#:~:text=Grasimile%20esentiale%20sunt%20de%20doua,ateroslcerozei%20si%20a%20infarctului%20miocardic" target="_blank">Vegis.ro – Uleiuri sănătoase pentru gătit</a></li>
+  </ul>
+</section>
+  `
+};
+    
+        document.querySelectorAll(".menu-item").forEach(item => {
+            item.addEventListener("click", function(e) {
+                e.preventDefault();
+                const section = this.dataset.section;
+                const mainContent = document.getElementById("main-content");
+                mainContent.innerHTML = content[section] || "<h2>Secțiune neimplementată</h2>";
+                // GESTIONARE LOGO GLOBAL
+const existingLogo = document.getElementById("logo-global");
+if (existingLogo) existingLogo.remove();
+
+if (section !== "acasa") {
+  const logo = document.createElement("img");
+  logo.src = "Assets/poze/logo-naturavie.png";
+  logo.alt = "Logo NaturaVie";
+  logo.className = "logo-global-fixed";
+  logo.id = "logo-global";
+  document.body.appendChild(logo);
+}
+            });
+        });
+    </script>
+    <script src="Assets/js/script-bot.js"></script>
+    <button id="darkModeToggle" aria-label="Comută modul întunecat">🌙</button>
+    <script>
+      const toggle = document.getElementById("darkModeToggle");
+      const body = document.body;
+    
+      // Salvează preferința în localStorage
+      if (localStorage.getItem("dark-mode") === "true") {
+        body.classList.add("dark-mode");
+      }
+    
+      toggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        localStorage.setItem("dark-mode", body.classList.contains("dark-mode"));
+      });
+
+
+
+
+      document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.accordion-header').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+
+      button.classList.toggle('active');
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        document.querySelectorAll('.accordion-content').forEach(el => el.style.maxHeight = null);
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+});
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+      });
+       const toggleBtn = document.getElementById('menu-toggle');
+  const sidebar = document.querySelector('.sidebar');
+
+  toggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+  });
+    </script>    
+</body>
+</html>
